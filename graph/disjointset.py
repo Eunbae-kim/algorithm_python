@@ -9,7 +9,7 @@ def find_parent(parent, x):
 # 두 원소가 속한 집합을 합치기
 def union_parent(parent, a,b):
     a = find_parent(parent,a)
-    b = find_parent(parent)
+    b = find_parent(parent,b)
 
     if a<b:
         parent[b] = a
@@ -41,5 +41,5 @@ for i in range(1,v+1):
 print('각 원소가 속한 집합 : ', end='')
 for i in range(1,v+1):
     print(parent(parent[i]), end=' ')
-    
+
     
